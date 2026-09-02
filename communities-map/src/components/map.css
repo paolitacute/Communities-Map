@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #592d85;
+  overflow: hidden;
+}
+
+/* Map area */
+.map-wrap {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+/* 2x3 Circle Grid on the right */
+.country-grid {
+  height: 74vh;
+  display: grid;
+  gap: 20px;
+  place-items: center;
+  padding: 13vh 10px;
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+/* Circular Button Wrapper */
+.flag-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  background: #1e293b;
+  overflow: hidden; /* Clips the rectangular image into a circle */
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flag-circle:hover {
+  transform: scale(1.08);
+  border-color: #38bdf8;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.flag-circle:active {
+  transform: scale(0.96);
+}
+
+/* Flag Image */
+.flag-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the flag stretches evenly to fill the circle */
+  display: block;
+  pointer-events: none;
+}
+
+/* -----------------------------
+   Right Sidebar Scrollable Styles
+-------------------------------- */
+.details-sidebar {
+  width: 40vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  color: #f8fafc;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.3);
+  overflow-y: auto; /* Enables vertical scrolling */
+  height: 100vh; /* Locks sidebar height to the screen */
+}
+
+/* Scrollbar styling for a cleaner look */
+.details-sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+.details-sidebar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+.details-sidebar::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 16px 24px;
+  position: sticky; /* Keeps the title at the top while scrolling */
+  top: 0;
+  background: rgba(15, 23, 42, 0.98); 
+  z-index: 2;
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-header h2 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #ef4444;
+}
+
+.sidebar-image-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 24px 24px 24px;
+}
+
+.sidebar-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.no-images-text {
+  color: #94a3b8;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
