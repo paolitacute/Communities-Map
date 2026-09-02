@@ -295,12 +295,83 @@ const COUNTRIES = [
     center: [31.251632565384387, 30.06824439988652],
     zoom: 12,
     markers: [
-      { lng: 31.2357, 
-        lat: 30.0444, 
-        title: 'Cairo', 
-        icon: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
-        iconSize: [40, 40]
-      }
+      { lng: 31.24893396037522, 
+        lat: 30.061082451647394, 
+        title: 'Sahara International School',
+        icon: iconSchool,
+        iconSize: [50, 50],
+        images: getImages('Egypt', 'School')
+      },
+      { lng: 31.416577460325335,
+        lat: 30.11755703306764,  
+        title: 'Cairo International Airport',
+        icon: iconAirport,
+        iconSize: [50, 50],
+        images: getImages('Egypt', 'Airport')
+      },
+      { lng: 31.223462633285287, 
+        lat: 30.013714963287065, 
+        title: 'Zohairy General Hospital',
+        icon: iconHospital,
+        iconSize: [50, 50],
+        images: getImages('Egypt', 'Hospital') 
+      },
+      { lng: 31.277548076867756, 
+        lat: 30.0708616786776, 
+        title: 'Vet Me Clinic',
+        icon: iconVeterinary,
+        iconSize: [50, 50],
+        images:  getImages('Egypt', 'Veterinary')
+      },
+      { lng: 31.255925270568255, 
+        lat: 30.07894010311657,  
+        title: 'EGYPT FIRE ASSOCIATION - STATION #1',
+        icon: iconFire,
+        iconSize: [50, 50],
+        images: getImages('Egypt', 'Fire Station') 
+      },
+      { lng: 31.23137726931147, 
+        lat: 30.0351919749585,  
+        title: 'Qasr El Nil Police Station',
+        icon: iconPolice,
+        iconSize: [50, 50],
+        images: getImages('Egypt', 'Police Station')
+      },
+      { lng: 31.235291190114154, 
+        lat: 30.04686775542643,    
+        title: 'Steigenberger Hotel El Tahrir Cairo',
+        icon: iconHotel,
+        iconSize: [50, 50],
+        images: getImages('Egypt', 'Hotel') 
+      },
+      { lng: 31.223597549966914, 
+        lat: 30.064812882057875,   
+        title: 'Abou El Sid',
+        icon: iconRestaurant,
+        iconSize: [50, 50],
+        images: getImages('Egypt', 'Restaurant')
+      },
+      { lng: 31.22268655965187, 
+        lat: 30.066551885119157,    
+        title: 'Greater Cairo Public Library',
+        icon: iconLibrary,
+        iconSize: [50, 50],
+        images: getImages('Egypt', 'Library')
+      },
+      { lng: 31.216434190785478,
+        lat: 30.066515999010406,  
+        title: 'Metro Markets',
+        icon: iconGrocery,
+        iconSize: [50, 50],
+        images: getImages('Egypt', 'Grocery Store')
+      },
+      { lng: 31.26553818806617,
+        lat: 30.04157435189667,   
+        title: 'Al Azhar Park Playground',
+        icon: iconPlayground,
+        iconSize: [50, 50],
+        images: getImages('Egypt', 'Playground')
+      },
     ]
   },
   {
@@ -387,7 +458,6 @@ export default function Map() {
           anchor: 'bottom' 
         })
           .setLngLat([markerLoc.lng, markerLoc.lat])
-          .setPopup(new maptilersdk.Popup({ offset: 25 }).setText(markerLoc.title))
           .addTo(map.current);
       });
     });
