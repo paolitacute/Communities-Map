@@ -365,8 +365,21 @@ export default function Map() {
         el.style.height = `${markerLoc.iconSize[1]}px`;
         el.style.backgroundSize = '100%';
 
+        // Add the click listener
         el.addEventListener('click', () => {
+          // 1. Open the sidebar
           setSelectedMarker(markerLoc);
+          
+          // 2. Fly to the parent city's center and zoom
+          if (map.current) {
+            map.current.flyTo({
+              center: country.center,
+              zoom: country.zoom,
+              essential: true,
+              speed: 1.2,
+              curve: 1.42
+            });
+          }
         });
 
         new maptilersdk.Marker({ 
@@ -374,6 +387,7 @@ export default function Map() {
           anchor: 'bottom' 
         })
           .setLngLat([markerLoc.lng, markerLoc.lat])
+          .setPopup(new maptilersdk.Popup({ offset: 25 }).setText(markerLoc.title))
           .addTo(map.current);
       });
     });
