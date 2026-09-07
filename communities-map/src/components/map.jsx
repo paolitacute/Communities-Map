@@ -31,6 +31,22 @@ const getImages = (cityName, locationFolder) => {
 // Define your 6 countries, their target zoom/center, and markers
 const COUNTRIES = [
   {
+    id: 'cp',
+    name: 'Corbett Prep',
+    flag: 'https://flagcdn.com/w160/us.png',
+    center: [-82.50026334798702, 28.05691306397115],
+    zoom: 15,
+    markers: [
+      { lng: -82.50026334798702,  
+        lat: 28.05691306397115, 
+        title: 'Corbett Preparatory School of IDS',
+        icon: iconSchool,
+        iconSize: [50, 50],
+        images: getImages('Corbett Prep', 'School')
+      }
+    ]
+  },
+  {
     id: 'us',
     name: 'United States',
     flag: 'https://flagcdn.com/w160/us.png',
