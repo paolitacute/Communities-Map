@@ -26,7 +26,7 @@
 
 /* 2x3 Circle Grid on the right */
 .country-grid {
-  height: 100vh;
+  height: 97vh;
   display: grid;
   gap: 2vh;
   place-items: center;
