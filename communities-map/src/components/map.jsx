@@ -409,8 +409,8 @@ const COUNTRIES = [
         iconSize: [50, 50],
         images:  getImages('Lausanne', 'Veterinary')
       },
-      { lng: 46.522470161766144, 
-        lat: 6.624678982001334, 
+      { lng: 6.624651656225429, 
+        lat: 46.52241355474197, 
         title: 'Caserne des sapeurs-pompiers professionnels de Lausanne',
         icon: iconFire,
         iconSize: [50, 50],
