@@ -28,6 +28,8 @@
 .country-grid {
   height: 100%;
   position: fixed;
+  transform: translateZ(0);
+  will-change: transform;
   margin: auto;
   display: grid;
   gap: 2vh;
