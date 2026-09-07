@@ -16,7 +16,7 @@ import iconVeterinary from '../assets/Veterinary.png';
 
 
 // Grabs every image inside all subdirectories of the assets folder
-const allAssetsImages = import.meta.glob('../assets/**/**/*.{png,jpg,jpeg,webp}', { 
+const allAssetsImages = import.meta.glob('../assets/**/**/*.{png,jpg,jpeg,webp,avif}', { 
   eager: true, 
   import: 'default' 
 });
@@ -391,9 +391,9 @@ const COUNTRIES = [
   },
   {
     id: 'pg',
-    name: 'South Africa',
+    name: 'Papua New Guinea',
     flag: 'https://flagcdn.com/w160/pg.png',
-    center: [18.492048994629577, -33.98327285077308],
+    center: [147.18435670000883, -9.44405088764587],
     zoom: 11,
     markers: [
       { lng: 151.2093, 
