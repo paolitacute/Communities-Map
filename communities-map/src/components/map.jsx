@@ -16,7 +16,7 @@ import iconVeterinary from '../assets/Veterinary.png';
 
 
 // Grabs every image inside all subdirectories of the assets folder
-const allAssetsImages = import.meta.glob('../assets/**/**/*.{png,jpg,jpeg,webp,avif}', { 
+const allAssetsImages = import.meta.glob('../assets/**/**/*.{png,jpg,jpeg,webp,avif,ini}', { 
   eager: true, 
   import: 'default' 
 });
