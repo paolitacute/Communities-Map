@@ -396,12 +396,83 @@ const COUNTRIES = [
     center: [147.18435670000883, -9.44405088764587],
     zoom: 11,
     markers: [
-      { lng: 151.2093, 
-        lat: -33.8688, 
-        title: 'Sydney',
-        icon: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
-        iconSize: [40, 40]
-     }
+      { lng: 147.16473333987454, 
+        lat: -9.392558585904126,
+        title: 'Kopkop College',
+        icon: iconSchool,
+        iconSize: [50, 50],
+        images: getImages('Port Moresby', 'School')
+      },
+      { lng: 147.2113937803524,
+        lat: -9.438816454831098, 
+        title: 'Jacksons International Airport',
+        icon: iconAirport,
+        iconSize: [50, 50],
+        images: getImages('Port Moresby', 'Airport')
+      },
+      { lng: 147.19519304966596, 
+        lat: -9.476040124368224,
+        title: 'Port Moresby General Hospital',
+        icon: iconHospital,
+        iconSize: [50, 50],
+        images: getImages('Port Moresby', 'Hospital') 
+      },
+      { lng: 147.1864108361732, 
+        lat: -9.451433809997168,
+        title: 'RSPCA Papua New Guinea',
+        icon: iconVeterinary,
+        iconSize: [50, 50],
+        images:  getImages('Port Moresby', 'Veterinary')
+      },
+      { lng: 147.1513563391951, 
+        lat: -9.476104493144073, 
+        title: 'Port Moresby Fire and Rescue',
+        icon: iconFire,
+        iconSize: [50, 50],
+        images: getImages('Port Moresby', 'Fire Station') 
+      },
+      { lng: 147.17943774966486, 
+        lat: -9.424308301962139,  
+        title: 'Waigani Police Station',
+        icon: iconPolice,
+        iconSize: [50, 50],
+        images: getImages('Port Moresby', 'Police Station')
+      },
+      { lng: 147.18319756686014, 
+        lat: -9.437592034704693,   
+        title: 'Sheraton Port Moresby Stanley Hotel & Suites',
+        icon: iconHotel,
+        iconSize: [50, 50],
+        images: getImages('Port Moresby', 'Hotel') 
+      },
+      { lng: 147.1520798515174, 
+        lat: -9.476489665314745,   
+        title: 'Port Terrace Restaurant & Bar',
+        icon: iconRestaurant,
+        iconSize: [50, 50],
+        images: getImages('Port Moresby', 'Restaurant')
+      },
+      { lng: 147.17042037241345, 
+        lat: -9.408288346846547,   
+        title: 'Michael Somare Library',
+        icon: iconLibrary,
+        iconSize: [50, 50],
+        images: getImages('Port Moresby', 'Library')
+      },
+      { lng: 147.1529195361736,
+        lat: -9.467659219469292,  
+        title: 'Waterfront Foodworld',
+        icon: iconGrocery,
+        iconSize: [50, 50],
+        images: getImages('Port Moresby', 'Grocery Store')
+      },
+      { lng: 147.27588846500785,
+        lat: -9.39403221640759,   
+        title: 'Adventure Park PNG',
+        icon: iconPlayground,
+        iconSize: [50, 50],
+        images: getImages('Port Moresby', 'Playground')
+      },
     ]
   }
 ];
