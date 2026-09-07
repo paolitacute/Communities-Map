@@ -28,6 +28,7 @@
 .country-grid {
   height: 100%;
   position: fixed;
+  margin: auto;
   display: grid;
   gap: 2vh;
   place-items: center;
