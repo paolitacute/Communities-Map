@@ -43,9 +43,10 @@
   height: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
+  margin: auto;
   border: 3px solid rgba(255, 255, 255, 0.2);
   background: #1e293b;
-  overflow: hidden; /* Clips the rectangular image into a circle */
+  overflow: hidden; 
   padding: 0;
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
