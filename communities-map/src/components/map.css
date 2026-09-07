@@ -27,6 +27,7 @@
 /* 2x3 Circle Grid on the right */
 .country-grid {
   height: 100%;
+  position: fixed;
   display: grid;
   gap: 2vh;
   place-items: center;
@@ -34,7 +35,6 @@
   background-color: transparent;
   backdrop-filter: blur(8px);
   z-index: 10;
-  positon: fixed;
 }
 
 /* Circular Button Wrapper */
