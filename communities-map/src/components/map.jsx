@@ -36,7 +36,7 @@ const COUNTRIES = [
     name: 'Corbett Prep',
     flag: 'https://media.licdn.com/dms/image/v2/C4E0BAQFtV1Aa9krJ-g/company-logo_200_200/company-logo_200_200/0/1631041681563/corbettprep_logo?e=2147483647&v=beta&t=4OtGggUjJWSAfl3P3NHXd8YXJxSlGYndff10Sb7NBmg',
     center: [-82.50026334798702, 28.05691306397115],
-    zoom: 15,
+    zoom: 9,
     markers: [
       { lng: -82.50026334798702,  
         lat: 28.05691306397115, 
