@@ -13,6 +13,7 @@ import iconPolice from '../assets/Police.png';
 import iconRestaurant from '../assets/Restaurant.png';
 import iconSchool from '../assets/School.png';
 import iconVeterinary from '../assets/Veterinary.png';
+import iconCorbett from '../assets/Corbett Prep.png';
 
 
 // Grabs every image inside all subdirectories of the assets folder
@@ -40,7 +41,7 @@ const COUNTRIES = [
       { lng: -82.50026334798702,  
         lat: 28.05691306397115, 
         title: 'Corbett Preparatory School of IDS',
-        icon: iconSchool,
+        icon: iconCorbett,
         iconSize: [50, 50],
         images: getImages('Corbett Prep', 'School')
       }
