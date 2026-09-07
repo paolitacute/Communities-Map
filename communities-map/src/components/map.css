@@ -26,11 +26,11 @@
 
 /* 2x3 Circle Grid on the right */
 .country-grid {
-  height: 74vh;
+  height: 100vh;
   display: grid;
-  gap: 20px;
+  gap: 2vh;
   place-items: center;
-  padding: 13vh 10px;
+  padding: 3vh 2vw;
   background-color: transparent;
   backdrop-filter: blur(8px);
   z-index: 10;
@@ -38,8 +38,8 @@
 
 /* Circular Button Wrapper */
 .flag-circle {
-  width: 80px;
-  height: 80px;
+  height: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   border: 3px solid rgba(255, 255, 255, 0.2);
   background: #1e293b;
