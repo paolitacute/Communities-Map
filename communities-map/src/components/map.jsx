@@ -445,7 +445,7 @@ const COUNTRIES = [
         title: 'Beau-Rivage Palace',
         icon: iconHotel,
         iconSize: [50, 50],
-        images: getImages('Santo Domingo', 'Hotel') 
+        images: getImages('Lausanne', 'Hotel') 
       },
       { lng: 6.628664739672609,
         lat: 46.51541066797523,  
@@ -459,7 +459,7 @@ const COUNTRIES = [
         title: 'Bibliothèque Jeunesse',
         icon: iconLibrary,
         iconSize: [50, 50],
-        images: getImages('Santo Domingo', 'Library')
+        images: getImages('Lausanne', 'Library')
       },
       { lng: 6.627500099512993,
         lat: 46.523523596472344,  
@@ -473,7 +473,7 @@ const COUNTRIES = [
         title: 'Parc de Milan Playground',
         icon: iconPlayground,
         iconSize: [50, 50],
-        images: getImages('Santo Domingo', 'Playground')
+        images: getImages('Lausanne', 'Playground')
       },
     ]
   },
