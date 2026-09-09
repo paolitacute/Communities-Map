@@ -402,7 +402,7 @@ const COUNTRIES = [
     city: 'Lausanne',
     flag: 'https://flagcdn.com/w160/ch.png',
     center: [6.629693383826794, 46.527978688781914],
-    zoom: 12.4,
+    zoom: 12.7,
     markers: [
       { lng: 6.637463618777237, 
         lat: 46.543942511839305,
@@ -489,7 +489,7 @@ const COUNTRIES = [
     city: 'Port Moresby',
     flag: 'https://flagcdn.com/w160/pg.png',
     center: [147.18435670000883, -9.44405088764587],
-    zoom: 11.5,
+    zoom: 11.7,
     markers: [
       { lng: 147.16473333987454, 
         lat: -9.392558585904126,
