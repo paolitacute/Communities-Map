@@ -227,7 +227,7 @@ const COUNTRIES = [
     name: 'Dominican Republic',
     city: 'Santo Domingo',
     flag: 'https://flagcdn.com/w160/do.png',
-    center: [-69.94447639100584, 18.48033130485736],
+    center: [-69.83255300564808, 18.427666454640942],
     zoom: 11,
     markers: [
       { lng: -69.96670125587515, 
