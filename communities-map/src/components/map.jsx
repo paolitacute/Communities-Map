@@ -402,7 +402,7 @@ const COUNTRIES = [
     city: 'Lausanne',
     flag: 'https://flagcdn.com/w160/ch.png',
     center: [6.629693383826794, 46.527978688781914],
-    zoom: 12.2,
+    zoom: 12.4,
     markers: [
       { lng: 6.637463618777237, 
         lat: 46.543942511839305,
