@@ -645,7 +645,7 @@ export default function Map() {
       {/* LEFT: Flag Sidebar */}
       <aside className="country-grid">
         {COUNTRIES.map((country) => (
-          <>
+          <div classname="country-group">
             <button
               key={country.id}
               className="flag-circle"
@@ -658,8 +658,9 @@ export default function Map() {
                 className="flag-image" 
               />
             </button>
+            <span className="city-label">{country.city}</span>
             <span className="country-label">{country.name}</span>
-          </>
+          </div>
         ))}
       </aside>
 
