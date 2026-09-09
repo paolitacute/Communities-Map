@@ -589,7 +589,7 @@ export default function Map() {
       style: maptilersdk.MapStyle.SATELLITE_V4,
       center: [0, 20],
       projection: "globe",
-      zoom: 1.8
+      zoom: 2.4
     });
 
     const markersToUpdate = [];
