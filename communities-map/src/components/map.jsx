@@ -314,8 +314,8 @@ const COUNTRIES = [
     name: 'Egypt',
     city: 'Cairo',
     flag: 'https://flagcdn.com/w160/eg.png',
-    center: [31.251632565384387, 30.06824439988652],
-    zoom: 12,
+    center: [31.293458994084578, 30.070025140491683],
+    zoom: 11.7,
     markers: [
       { lng: 31.24893396037522, 
         lat: 30.061082451647394, 
