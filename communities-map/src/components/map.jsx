@@ -140,7 +140,7 @@ const COUNTRIES = [
     name: 'Japan',
     city: 'Tokyo',
     flag: 'https://flagcdn.com/w160/jp.png',
-    center: [139.5719183, 35.6887919],
+    center: [139.571354, 35.664599],
     zoom: 10.6,
     markers: [
       { lng: 139.74968096064828, 
@@ -227,7 +227,7 @@ const COUNTRIES = [
     name: 'Dominican Republic',
     city: 'Santo Domingo',
     flag: 'https://flagcdn.com/w160/do.png',
-    center: [-69.83255300564808, 18.427666454640942],
+    center: [-69.856834, 18.430373],
     zoom: 11,
     markers: [
       { lng: -69.96670125587515, 
