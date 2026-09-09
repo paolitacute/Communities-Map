@@ -143,8 +143,8 @@ const COUNTRIES = [
     center: [139.571354, 35.664599],
     zoom: 10.6,
     markers: [
-      { lng: 139.74968096064828, 
-        lat: 35.66157366812839, 
+      { lng: 139.617588, 
+        lat: 35.666201, 
         title: 'Onarimon Elementary School',
         icon: iconSchool,
         iconSize: [50, 50],
