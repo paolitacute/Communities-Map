@@ -579,7 +579,7 @@ export default function Map() {
 
     map.current = new maptilersdk.Map({
       container: mapContainer.current,
-      style: maptilersdk.MapStyle.SATELLITE_V4,
+      style: maptilersdk.MapStyle.HYBRID_V4,
       center: [0, 20],
       projection: "globe",
       zoom: 1.8
@@ -638,18 +638,21 @@ export default function Map() {
       {/* LEFT: Flag Sidebar */}
       <aside className="country-grid">
         {COUNTRIES.map((country) => (
-          <button
-            key={country.id}
-            className="flag-circle"
-            onClick={() => handleCountryClick(country)}
-            title={`Zoom to ${country.name}`}
-          >
-            <img 
-              src={country.flag} 
-              alt={`${country.name} flag`} 
-              className="flag-image" 
-            />
-          </button>
+          <>
+            <button
+              key={country.id}
+              className="flag-circle"
+              onClick={() => handleCountryClick(country)}
+              title={`Zoom to ${country.name}`}
+            >
+              <img 
+                src={country.flag} 
+                alt={`${country.name} flag`} 
+                className="flag-image" 
+              />
+            </button>
+            <span className="country-label">{country.name}</span>
+          </>
         ))}
       </aside>
 
