@@ -489,7 +489,7 @@ const COUNTRIES = [
     city: 'Port Moresby',
     flag: 'https://flagcdn.com/w160/pg.png',
     center: [147.18435670000883, -9.44405088764587],
-    zoom: 11.3,
+    zoom: 11.5,
     markers: [
       { lng: 147.16473333987454, 
         lat: -9.392558585904126,
