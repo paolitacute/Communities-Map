@@ -34,6 +34,7 @@ const COUNTRIES = [
   {
     id: 'cp',
     name: 'Corbett Prep',
+    city: '',
     flag: 'https://media.licdn.com/dms/image/v2/C4E0BAQFtV1Aa9krJ-g/company-logo_200_200/company-logo_200_200/0/1631041681563/corbettprep_logo?e=2147483647&v=beta&t=4OtGggUjJWSAfl3P3NHXd8YXJxSlGYndff10Sb7NBmg',
     center: [-82.50026334798702, 28.05691306397115],
     zoom: 9,
@@ -50,6 +51,7 @@ const COUNTRIES = [
   {
     id: 'us',
     name: 'United States',
+    city: 'Juneau, Alaska',
     flag: 'https://flagcdn.com/w160/us.png',
     center: [-134.4829628384107, 58.33826047050456],
     zoom: 11.2,
@@ -136,6 +138,7 @@ const COUNTRIES = [
   {
     id: 'jp',
     name: 'Japan',
+    city: 'Tokyo',
     flag: 'https://flagcdn.com/w160/jp.png',
     center: [139.68971912881838, 35.6867268441367],
     zoom: 10.5,
@@ -222,6 +225,7 @@ const COUNTRIES = [
   {
     id: 'do',
     name: 'Dominican Republic',
+    city: 'Santo Domingo',
     flag: 'https://flagcdn.com/w160/do.png',
     center: [-69.94447639100584, 18.48033130485736],
     zoom: 11,
@@ -308,6 +312,7 @@ const COUNTRIES = [
   {
     id: 'eg',
     name: 'Egypt',
+    city: 'Cairo',
     flag: 'https://flagcdn.com/w160/eg.png',
     center: [31.251632565384387, 30.06824439988652],
     zoom: 12,
@@ -394,6 +399,7 @@ const COUNTRIES = [
   {
     id: 'ch',
     name: 'Switzerland',
+    city: 'Lausanne',
     flag: 'https://flagcdn.com/w160/ch.png',
     center: [6.629693383826794, 46.527978688781914],
     zoom: 12,
@@ -480,6 +486,7 @@ const COUNTRIES = [
   {
     id: 'pg',
     name: 'Papua New Guinea',
+    city: 'Port Moresby',
     flag: 'https://flagcdn.com/w160/pg.png',
     center: [147.18435670000883, -9.44405088764587],
     zoom: 11,
