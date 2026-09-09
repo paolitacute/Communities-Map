@@ -33,8 +33,8 @@ const getImages = (cityName, locationFolder) => {
 const COUNTRIES = [
   {
     id: 'cp',
-    name: 'Corbett Prep',
-    city: '',
+    name: '',
+    city: 'Corbett Prep',
     flag: 'https://media.licdn.com/dms/image/v2/C4E0BAQFtV1Aa9krJ-g/company-logo_200_200/company-logo_200_200/0/1631041681563/corbettprep_logo?e=2147483647&v=beta&t=4OtGggUjJWSAfl3P3NHXd8YXJxSlGYndff10Sb7NBmg',
     center: [-82.50026334798702, 28.05691306397115],
     zoom: 9,
@@ -586,11 +586,13 @@ export default function Map() {
 
     map.current = new maptilersdk.Map({
       container: mapContainer.current,
-      style: maptilersdk.MapStyle.HYBRID_V4,
+      style: maptilersdk.MapStyle.SATELLITE_V4,
       center: [0, 20],
       projection: "globe",
       zoom: 1.8
     });
+
+    const markersToUpdate = [];
 
     COUNTRIES.forEach(country => {
       country.markers.forEach(markerLoc => {
@@ -598,16 +600,11 @@ export default function Map() {
         el.className = 'custom-marker';
         
         el.style.backgroundImage = `url(${markerLoc.icon})`;
-        el.style.width = `${markerLoc.iconSize[0]}px`;
-        el.style.height = `${markerLoc.iconSize[1]}px`;
         el.style.backgroundSize = '100%';
 
-        // Add the click listener
         el.addEventListener('click', () => {
-          // 1. Open the sidebar
           setSelectedMarker(markerLoc);
           
-          // 2. Fly to the parent city's center and zoom
           if (map.current) {
             map.current.flyTo({
               center: country.center,
@@ -619,14 +616,44 @@ export default function Map() {
           }
         });
 
+        // MapTiler natively handles hiding the marker behind the globe here
         new maptilersdk.Marker({ 
           element: el, 
-          anchor: 'bottom' 
+          anchor: 'bottom',
+          opacityWhenCovered: 0 
         })
           .setLngLat([markerLoc.lng, markerLoc.lat])
           .addTo(map.current);
+
+        // Save the element to animate its size during zoom
+        markersToUpdate.push({
+          el: el,
+          maxWidth: markerLoc.iconSize[0],
+          maxHeight: markerLoc.iconSize[1]
+        });
       });
     });
+
+    // Handle scaling animation when zooming
+    const updateMarkerSizes = () => {
+      if (!map.current) return;
+      
+      const currentZoom = map.current.getZoom();
+      const startZoom = -2; 
+      const endZoom = 9.0;   
+
+      let scale = (currentZoom - startZoom) / (endZoom - startZoom);
+      scale = Math.max(0, Math.min(1, scale)); 
+
+      markersToUpdate.forEach(marker => {
+        marker.el.style.width = `${marker.maxWidth * scale}px`;
+        marker.el.style.height = `${marker.maxHeight * scale}px`;
+      });
+    };
+
+    map.current.on('zoom', updateMarkerSizes);
+    updateMarkerSizes();
+
   }, []);
 
   const handleCountryClick = (country) => {
@@ -645,9 +672,15 @@ export default function Map() {
       {/* LEFT: Flag Sidebar */}
       <aside className="country-grid">
         {COUNTRIES.map((country) => (
-          <div classname="country-group">
+          <div key={country.id} className="country-group">
+            {/* Text Container aligned to the left */}
+            <div className="text-container">
+              <span className="city-label">{country.city}</span>
+              <span className="country-label">{country.name}</span>
+            </div>
+            
+            {/* Flag Button on the right */}
             <button
-              key={country.id}
               className="flag-circle"
               onClick={() => handleCountryClick(country)}
               title={`Zoom to ${country.name}`}
@@ -658,8 +691,6 @@ export default function Map() {
                 className="flag-image" 
               />
             </button>
-            <span className="city-label">{country.city}</span>
-            <span className="country-label">{country.name}</span>
           </div>
         ))}
       </aside>
