@@ -53,7 +53,7 @@ const COUNTRIES = [
     name: 'United States',
     city: 'Juneau, Alaska',
     flag: 'https://flagcdn.com/w160/us.png',
-    center: [-134.56280738772622, 58.35009324485277],
+    center: [-134.5355360875474, 58.339295514512735],
     zoom: 11.2,
     markers: [
       { lng: -134.42566974970657, 
