@@ -140,8 +140,8 @@ const COUNTRIES = [
     name: 'Japan',
     city: 'Tokyo',
     flag: 'https://flagcdn.com/w160/jp.png',
-    center: [139.68971912881838, 35.6867268441367],
-    zoom: 10.5,
+    center: [139.5420920311381, 35.68074420119133],
+    zoom: 10.7,
     markers: [
       { lng: 139.74968096064828, 
         lat: 35.66157366812839, 
